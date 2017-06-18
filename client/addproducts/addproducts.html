@@ -1,0 +1,130 @@
+
+<div class="form-horizontal">
+  <h2>Add Products</h2> 
+   <div ng-show="fail">
+  <div class="alert alert-danger alert-dismissable fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+  </div>
+</div>
+  <form class="form-horizontal" ng-submit='addProduct()'>
+    
+    <div class="form-group">
+      <label for="pwd">Name</label>
+      <input type="text" ng-model="productadded.name" class="form-control" placeholder="name" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="pwd">Image</label>
+      <input type="text" ng-model="productadded.image" class="form-control" placeholder="Image" required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Description</label>
+      <input type="text" ng-model="productadded.description" class="form-control" placeholder="Description" required>
+    </div>
+       <div  ng-show="Success">
+      <div class="alert alert-success alert-dismissable">
+    <a href="#/" class="close" data-dismiss="alert" aria-label="close">X</a>
+    <strong>Success!</strong> add new Product.
+  </div>
+    </div>
+    
+    <button class="btn btn-primary" value="">Add</button>
+  </form>
+</div>
+<hr>
+<h2>Edit product</h2>
+<input type="text" ng-model="editProduct.name">
+<button class="btn btn-primary" value="" ng-click="getPro()">Get Product</button>
+<form class="form-horizontal" ng-submit='editPro()'>
+    <div class="form-group">
+
+      
+    <div class="form-group">
+      <label for="pwd">Name</label>
+      <input type="text" ng-model="edited.name" class="form-control" placeholder="name"  required>
+    </div>
+    
+    <div class="form-group">
+      <label for="pwd">Image</label>
+      <input type="text" ng-model="edited.image" class="form-control" placeholder="Image"  required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">description</label>
+      <input type="text" ng-model="edited.description" class="form-control" placeholder="Description"  required>
+    </div>
+       <div  ng-show="Success">
+      <div class="alert alert-success alert-dismissable">
+    <a href="#/" class="close" data-dismiss="alert" aria-label="close">X</a>
+    <strong>Success!</strong> Edited done.
+  </div>
+    </div>
+    <button class="btn btn-primary" value="">Edit</button>
+    
+  </form>
+<br>
+<br>
+<br>
+<h2>Delete product</h2>
+  <div>
+    <p> Just put Product Name to delete all related formation </p>
+    <input type="text" value="remove"  ng-model="edited.name" placeholder="Mobile Name">
+
+<button class="btn btn-primary" value="" ng-click="removePro(edited._id)" >Remove Product</button>
+  </div>
+ <!-- show all clients -->
+<br>
+<hr>
+<h1>show all clients</h1>  
+<div class="row" ng-init="showClients()">
+     <div class="col-sm-6 col-md-4" ng-repeat="element in all">
+       
+         <ul>
+  <li><span class="span">Client number:</span>{{all.indexOf(element)+1}}</li>
+     <li><span class="span">Name:</span>{{element.name}}</li>
+        <li><span class="span">Email:</span>{{element.email}}</li>
+            <li><span class="span">Phone:</span>{{element.phone}}</li>
+   <li><span class="span">Company Name:</span>{{element.companyName}}</li>
+   </ul>
+         
+          
+             
+            
+           </div>
+           </div>
+        
+
+
+<hr id="separator">
+<!--delete client by his company name -->
+<br><hr>
+<h3>Remove Client by his Company Name</h3>
+<div>
+<input ng-model='definedclient.companyName' placeholder="company name">
+<button ng-click='getClient()'>show clien</button>
+  <button ng-click='deleteClient(definedclient._id)'>delete client</button>
+</div>
+           <!-- show all contacts -->
+           <h3>All Contacts</h3>
+<div class="row" ng-init='showAllContacts()'>
+  <div class="col-sm-6 col-md-4" ng-repeat='person in allcontacts'>
+  <ul>
+  <li><span class="span">contact number:</span>{{allcontacts.indexOf(person)+1}}</li>
+
+     <li><span class="span">Name:</span>{{person.name}}</li>
+        <li><span class="span">Email:</span>{{person.email}}</li>
+            <li><span class="span">Phone:</span>{{person.phone}}</li>
+   <li><span class="span">Message:</span>{{person.message}}</li>
+   </ul>
+   <hr>
+   </div>
+   </div>
+
+   <!--Delete All Contacts -->
+   <br>
+   <br><hr>
+   <h3>Delete All Contacts</h3>
+   <button ng-click='deleteAllContacts()'>Delete All Contacts</button>
+   
+
+

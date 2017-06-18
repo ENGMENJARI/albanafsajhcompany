@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>شركة البنفسج للمنظفات</title>
+    <!-- <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=345542982166233";
+      fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+<link href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="image/favicon.ico" sizes="32x32" />
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="./css/commentsAndReplys.css">
+
+<script src="product/product.js"></script>
+
+<script src="services/services.js"></script>
+<script src="app.js"></script>
+<script src="addproducts/addproducts.js"></script>
+<script src="main/main.js"></script>
+
+<script src="location/location.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+
+
+</head>
+
+<body ng-app ="Banafsajh">
+   <!-- menu bar -->
+   <div class="navbar-wrapper">
+    <div class="container-fluid">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                       <img src="image/logo1.jpg" class="img-responsive1"/>
+                   </ul> 
+                   <ul class="nav navbar-nav">
+                    <li class="active"><a href="#/main" class="">الصفحة الرئيسية</a></li>
+                    
+                    <li><a href="#/product">منتجاتنا</a></li>
+                    <li><a href="#/location">تواصل معنا</a></li>
+                    
+                    
+                </ul>
+                
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return to the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+<ng-view></ng-view>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>  
+
+
+<!-- <script>
+    $(document).ready(function(){
+     $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+        // scroll body to 0px on click
+        $('#back-to-top').click(function () {
+            $('#back-to-top').tooltip('hide');
+            $('body,html').animate({
+                scrollTop: 0
+            }, 1200);
+            return false;
+        });
+        
+        $('#back-to-top').tooltip('show');
+    });
+</script> -->
+
+
+
+
+
+
+</body>
+</html>

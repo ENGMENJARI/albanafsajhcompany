@@ -1,0 +1,80 @@
+
+<div class="form-horizontal">
+  <h2>Be a Client</h2> 
+   <div ng-show="fail">
+  <div class="alert alert-danger alert-dismissable fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+  </div>
+</div>
+  <form class="form-horizontal" ng-submit='addClient()'>
+    
+    <div class="form-group">
+      <label for="pwd">Name</label>
+      <input type="text" ng-model="client.name" class="form-control" placeholder="name" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="pwd">company name</label>
+      <input type="text" ng-model="client.companyName" class="form-control" placeholder="company name" required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">phone</label>
+      <input type="text" ng-model="client.phone" class="form-control" placeholder="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="pwd">email</label>
+      <input type="text" ng-model="client.email" class="form-control" placeholder="email" required>
+    </div>
+       <div  ng-show="Success">
+      <div class="alert alert-success alert-dismissable">
+    <a href="#/" class="close" data-dismiss="alert" aria-label="close">X</a>
+    <strong>Success!</strong> .
+  </div>
+    </div>
+    
+    <button class="btn btn-primary" value="">go</button>
+  </form>
+</div>
+
+<!-- contact us form -->
+<div class="form-horizontal">
+
+<h2>Contact us</h2>
+<div ng-show="fail">
+  <div class="alert alert-danger alert-dismissable fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+  </div>
+</div>
+<form ng-submit='contact()' class="form-horizontal" id="contact-form"  >
+  <div class="form-group">
+    <label >Name</label>
+    <input ng-model="contacts.name" type="text" class="form-control" id="inputName"   placeholder="name" required >
+  </div>
+  <div class="form-group">
+    <label for="pwd">Email</label>
+    <input ng-model="contacts.email" class="form-control" id="inputEmail" type="email" placeholder="email" required >
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input ng-model="contacts.phone" class="form-control" id="inputPhone" type="phone"  placeholder="phone number" required >
+  </div>
+  <div class="form-group">
+    <label for="pwd">Message</label>
+    <input ng-model="contacts.message" class="form-control" id="inputMessage" type="text"  placeholder="your message" required >
+  </div>
+
+  
+  <button class="btn btn-primary" value="">Send</button>
+  <div  ng-show="Success">
+      <div class="alert alert-success alert-dismissable">
+    <a href="#/" class="close" data-dismiss="alert" aria-label="close">X</a>
+    <strong>Success!</strong> .
+  </div>
+    </div>
+</form>
+</div>
+<br>
+<br>
+
